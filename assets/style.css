@@ -77,8 +77,7 @@ nav ul li:hover::after {
   width: 100%;
 }
 
-.btn-contact a,
-.btn-login a {
+.btn-contact a {
   margin: auto;
   text-decoration: none;
   align-items: center;
@@ -127,7 +126,7 @@ button:hover {
   display: block;
   width: 28px;
   height: 3px;
-  background-color: #ffc300;
+  background-color: #20325a;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -135,7 +134,6 @@ button:hover {
 .jumbotron {
   display: flex;
   justify-content: center;
-  /* padding: 60px; */
   background-image: url(img/jumbotron.png);
   background-size: cover;
   background-position: center;
@@ -160,27 +158,27 @@ main {
   width: auto;
 }
 
-.home {
+.about {
   /* background-color: #ed0226; */
   display: flex;
   flex-direction: column;
   width: auto;
   margin: auto;
 }
-.home h1 {
+.about h1 {
   font-size: 30px;
   align-items: center;
   width: fit-content;
   /* text-align: center; */
   border-left: 10px solid #ef4b4c;
   background-color: #00000024;
-  margin: 80px 0 0 100px;
+  margin: 80px 0 0 80px;
   padding: 5px 15px;
   color: #20325a;
   /* text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.4); */
 }
 
-.content-home {
+.content-about {
   background-size: cover;
   background-position: top;
   background-position: right;
@@ -189,8 +187,9 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 20px;
-  margin: 0 100px;
+  padding-top: 0px;
+  margin: 0 80px;
+  /* margin: auto; */
 }
 .col-1 {
   display: flex;
@@ -208,8 +207,6 @@ main {
 
 .col-2 p {
   text-align: justify;
-  margin: auto;
-  width: 90%;
   line-height: 30px;
   color: #000000;
 }
@@ -223,13 +220,11 @@ main {
   border-radius: 10px;
 }
 
-.home .col-2 h1 {
-  /* font-size: 70px; */
+.col-2 h2 {
   width: auto;
   font-size: 40px;
   padding: 0;
   margin: 30px 0;
-  /* line-height: 100%; */
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -238,7 +233,7 @@ main {
   background-color: #00000000;
 }
 
-.content-home h3 {
+.content-about h3 {
   text-align: center;
   width: 60%;
   padding: 30px 0 50px 0;
@@ -266,40 +261,44 @@ main {
   /* text-align: center; */
   border-left: 10px solid #ef4b4c;
   background-color: #00000024;
-  margin: 80px 0 0 100px;
+  margin: 80px 0 0 80px;
   padding: 5px 15px;
   color: #20325a;
   /* text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.4); */
 }
 .content-profile {
   padding: 20px 0 50px 0;
-  margin: 0 100px;
-  /* margin: auto;
-  margin: 50px 0 70px 0; */
+  margin: 0 80px;
   width: auto;
   height: auto;
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: row;
   justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .content-profile table {
-  /* margin: 260px; */
-  margin-left: 20px;
+  /* margin-left: 20px; */
+  vertical-align: middle;
   font-size: 18px;
   color: #000000;
   font-weight: 400;
   line-height: 30px;
+  word-wrap: break-word;
+  table-layout: fixed;
+}
+td {
+  vertical-align: middle;
+  word-wrap: break-word;
 }
 .profile-row2 {
-  padding-right: 30px;
+  margin-right: 10px;
 }
 .profile-row1 {
   display: flex;
   justify-content: center;
-  padding-left: 30px;
+  margin-left: 10px;
 }
 
 .fig-profile {
@@ -328,7 +327,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 100px;
+  margin: 100px 0 100px 0;
 }
 
 /* ===SERVICE===== */
@@ -347,16 +346,20 @@ main {
   color: #fff;
 }
 .wrapper {
-  width: 380px;
+  max-width: 380px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
   background: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0px 15px 20px rgba(255, 255, 255, 0.1);
 }
 .wrapper .title {
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 600;
   text-align: center;
   line-height: 80px;
+  position: relative;
   color: #fff;
   user-select: none;
   border-radius: 10px 10px 0 0;
@@ -439,7 +442,6 @@ form .field input[type="submit"] {
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
-  background: linear-gradient(-135deg, #c850c0, #4158d0);
   background: #3d619b;
   transition: all 0.3s ease;
 }
@@ -491,8 +493,13 @@ footer {
     width: 50%;
   }
   /* main */
-  .content-home {
+
+  .about h1 {
+    margin: 80px 0 0 60px;
+  }
+  .content-about {
     flex-direction: column;
+    margin: 0 60px;
   }
 
   .col-1 {
@@ -501,19 +508,52 @@ footer {
 
   .col-2 {
     width: 100%;
-    margin: 0;
+    margin: auto;
   }
 
   .col-2 p {
     width: 100%;
+    margin: auto;
   }
 
   .fig-about {
     margin: auto;
+    margin-top: 20px;
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
+  }
+
+  .col-2 h1 {
+    margin: 30px 0;
+  }
+
+  .content-about h3 {
+    width: 100%;
+    padding: 30px 0 0 0;
+  }
+  .content-profile {
+    flex-direction: column-reverse;
+    margin: 0 60px;
+  }
+  .profile h1 {
+    margin: 80px 0 0 60px;
+  }
+
+  .content-profile table {
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .profile-row2 {
+    padding: 0;
+    margin: 0;
+  }
+  .profile-row1 {
+    padding: 0;
+    margin: 0;
   }
 }
+/* profile */
 
 @media all and (max-width: 576px) {
   .menu-toggle {
@@ -532,7 +572,7 @@ footer {
 
   nav ul {
     display: none;
-    margin: 50px 0;
+    margin: 60px 0;
     background-color: #082f53;
     position: absolute;
     top: 0;
@@ -547,15 +587,77 @@ footer {
 
   nav ul li a {
     display: flex;
+    color: #fff;
     justify-content: center;
     align-items: center;
     height: 50px;
-    border-top: 1px solid #ffffff;
+    /* border-top: 1px solid #ffffff; */
+    /* border-bottom: 1px solid #ffffff; */
   }
 
   nav a:active,
   nav a:hover {
     font-weight: 600;
-    color: #ffc300;
+    color: #ef4b4c;
+  }
+
+  button {
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  /* jumbtron */
+  .jumbotron {
+    height: 300px;
+  }
+  .jumbotron h1 {
+    font-size: 40px;
+  }
+
+  /* about */
+  .about h1,
+  .profile h1 {
+    font-size: 24px;
+    margin: 80px 0 0 30px;
+  }
+  .content-about,
+  .content-profile {
+    margin: 0 30px;
+  }
+
+  .fig-about {
+    max-width: 300px;
+  }
+  .col-2 h2 {
+    font-size: 30px;
+    margin: 20px 0 20px 0;
+  }
+
+  .content-profile table {
+    font-size: 16px;
+  }
+
+  /* service */
+
+  .content-service {
+    padding: 0 10px;
+  }
+
+  .wrapper .title {
+    line-height: 60px;
+  }
+  .wrapper form {
+    padding: 10px 20px;
+  }
+  .wrapper form .field input {
+    font-size: 16px;
+  }
+  .wrapper form .field label {
+    font-size: 16px;
+  }
+
+  form .field input:focus ~ label,
+  form .field input:valid ~ label {
+    font-size: 14px;
   }
 }
